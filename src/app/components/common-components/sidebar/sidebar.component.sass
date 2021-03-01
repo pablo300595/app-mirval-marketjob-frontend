@@ -1,0 +1,22 @@
+@import './../../../mixins'
+
+.polite-sidebar
+    z-index: 1
+    position: fixed
+    display: flex
+    flex-direction: row
+    width: 100%
+    height: 10vh
+    background-color: rgb(226, 226, 226)
+    .sidebar__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 16.66%
+        background-color: none
+        img
+            +widthandheight($width: 60%, $height: 60%)
+    .sidebar__item:hover
+        background-color: #fff
+        

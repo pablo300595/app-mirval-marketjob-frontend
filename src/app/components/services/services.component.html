@@ -1,0 +1,21 @@
+<div class="title">
+    <h1>Services</h1>
+</div>
+
+<div class="polite-cards">
+    <div class="polite-card" *ngFor="let card of cards">
+        <div class="polite-card-title">
+            <p>{{card.title}}</p>
+        </div>
+        <div class="polite-card-description">
+            <p>{{card.description}}</p>
+        </div>
+        <div class="polite-card-price">
+            <p>Cost: {{card.price}}$</p>
+        </div>
+    </div>
+</div>
+
+<div class="polite-button">
+    <img src="./../../../assets/plus_icon.svg" alt="plus_icon">
+</div>

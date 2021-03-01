@@ -1,0 +1,51 @@
+@import './../../mixins'
+.polite-section
+    +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100vw, $height: 25vh)
+    position: fixed
+    margin-top: 10vh
+    form
+        +initflex($direction: column, $justification: space-evenly, $itemAlign: center, $bgcolor: rgb(131, 131, 131), $width: 100%, $height: 100%)
+        .polite-input-row
+            +initflex($direction: row, $justification: none, $itemAlign: none, $bgcolor: white, $width: 90%, $height: 2em)
+            border-radius: 0.5em
+            img
+                +widthandheight($width: 10%, $height: 2em)
+            .polite-input
+                +fontAndBorder($borderWidth: 0, $borderRadius: 0.5em, $fontFamily: arial, $fontWeight: bold)
+                +widthandheight($width: 90%, $height: 2em)
+                border-image: none
+            .polite-input::-webkit-input-placeholder
+                text-align: center
+            .polite-input:focus, input:focus
+                outline: none
+        .polite-button
+            +fontAndBorder($borderWidth: 0, $borderRadius: 0.5em, $fontFamily: arial, $fontWeight: bold)
+            +widthandheight($width: 90%, $height: 2.5em)
+            color: white
+            background-color: red
+            padding: 0 0
+.polite-cards
+    +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: rgb(197, 197, 197), $width: 100%, $height: 100%)
+    margin-top: 38vh
+    .polite-card
+        +initflex-NoHeight($direction: column, $justification: center, $itemAlign: center, $bgcolor: white, $width: 85vw)
+        border-radius: 0.5em
+        margin-bottom: 0.5em
+        .polite-card-title
+            +initflex($direction: row, $justification: center, $itemAlign: center, $bgcolor: none, $width: 75%, $height: 1.2em)
+            p
+                font-family: arial
+                font-weight: bold
+                color: gray
+        .polite-card-description
+            +initflex-NoHeight($direction: row, $justification: center, $itemAlign: center, $bgcolor: none, $width: 75%)
+            p
+                font-family: arial
+                font-size: 0.7em
+                text-align: justify
+        .polite-card-price
+            +initflex($direction: row, $justification: flex-end, $itemAlign: center, $bgcolor: none, $width: 75%, $height: 1.2em)
+            p
+                font-family: arial
+                font-size: 0.6em
+                font-weight: bold

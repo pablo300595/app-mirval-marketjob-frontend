@@ -1,0 +1,43 @@
+@import './../../mixins'
+
+.title-top
+    +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: rgb(102, 95, 95), $width: 100%, $height: 10vh)
+    z-index: 3
+    margin-top: 10vh
+    position: fixed
+    h1
+        font-family: arial
+        font-size: 1.2em
+        color: white
+.title-bottom
+    +initflex($direction: column, $justification: flex-end, $itemAlign: center, $bgcolor: rgb(255, 255, 255), $width: 100%, $height: 10vh)
+    z-index: 3
+    margin-top: 20vh
+    position: fixed
+    h1
+        font-family: arial
+        font-size: 1.2em
+        color: white
+    .title-bottom-name
+        p
+            font-family: arial
+            font-size: 0.8em
+            font-weight: bold
+            margin-block-start: 0
+            margin-block-end: 0
+    .title-bottom-location
+        p
+            font-family: arial
+            font-size: 0.8em
+            color: gray
+            margin-block-start: 0
+            margin-block-end: 0
+
+.profile-icon
+    +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 20vw, $height: 10vh)
+    z-index: 4
+    margin-top: 15vh
+    position: fixed
+    left: 40vw
+    img
+        +widthandheight($width: 100%, $height: 100%)
