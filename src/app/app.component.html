@@ -1,2 +1,8 @@
+<div class="polite-startup-animation" *ngIf="!animationFinished" [@startupAnimation]="startupAnimationState">
+    <img src="./../../../assets/3D-printing.svg" alt="3D-printing">
+    <div class="animation-bar">
+        <p class="animation-title">Welcome Back!</p>
+    </div>
+</div>
 <app-sidebar></app-sidebar>
 <router-outlet></router-outlet>

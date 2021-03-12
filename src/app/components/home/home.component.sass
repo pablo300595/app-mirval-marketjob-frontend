@@ -4,33 +4,49 @@
     position: fixed
     margin-top: 10vh
     form
-        +initflex($direction: column, $justification: space-evenly, $itemAlign: center, $bgcolor: rgb(131, 131, 131), $width: 100%, $height: 100%)
-        .polite-input-row
-            +initflex($direction: row, $justification: none, $itemAlign: none, $bgcolor: white, $width: 90%, $height: 2em)
-            border-radius: 0.5em
-            img
-                +widthandheight($width: 10%, $height: 2em)
-            .polite-input
+        +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: rgb(131, 131, 131), $width: 100%, $height: 100%)
+        .form-search-section
+            +initflex($direction: column, $justification: space-evenly, $itemAlign: center, $bgcolor: #4c54a9, $width: 100%, $height: 75%)
+            .polite-input-row
+                +initflex($direction: row, $justification: none, $itemAlign: none, $bgcolor: white, $width: 90%, $height: 2em)
+                border-radius: 0.5em
+                img
+                    +widthandheight($width: 10%, $height: 2em)
+                .polite-input
+                    +fontAndBorder($borderWidth: 0, $borderRadius: 0.5em, $fontFamily: arial, $fontWeight: bold)
+                    +widthandheight($width: 90%, $height: 2em)
+                    border-image: none
+                .polite-input::-webkit-input-placeholder
+                    text-align: center
+                .polite-input:focus, input:focus
+                    outline: none
+            .polite-button
                 +fontAndBorder($borderWidth: 0, $borderRadius: 0.5em, $fontFamily: arial, $fontWeight: bold)
-                +widthandheight($width: 90%, $height: 2em)
-                border-image: none
-            .polite-input::-webkit-input-placeholder
-                text-align: center
-            .polite-input:focus, input:focus
-                outline: none
-        .polite-button
-            +fontAndBorder($borderWidth: 0, $borderRadius: 0.5em, $fontFamily: arial, $fontWeight: bold)
-            +widthandheight($width: 90%, $height: 2.5em)
-            color: white
-            background-color: red
-            padding: 0 0
+                +widthandheight($width: 90%, $height: 2.5em)
+                color: white
+                background-color: red
+                padding: 0 0
+        .form-search-filter
+            +initflex($direction: row, $justification: center, $itemAlign: center, $bgcolor: #434a99, $width: 100%, $height: 25%)
+            gap: 2em
+            .polite-filter
+                +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: rgb(88, 91, 248), $width: 8em, $height: 1.5em)
+                border-radius: 0.5em
+                opacity: 0.4
+                p
+                    color: white
+                    font-family: Arial, Helvetica, sans-serif
+
 .polite-cards
-    +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: rgb(197, 197, 197), $width: 100%, $height: 100%)
-    margin-top: 38vh
+    +initflex($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: rgb(241, 243, 248), $width: 100%, $height: 62vh)
+    margin-top: 35vh
+    overflow: scroll
     .polite-card
-        +initflex-NoHeight($direction: column, $justification: center, $itemAlign: center, $bgcolor: white, $width: 85vw)
+        +initflex-NoHeight($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: white, $width: 85vw)
         border-radius: 0.5em
         margin-bottom: 0.5em
+        box-sizing: border-box
+        padding: 2em 0em 2em 0em
         .polite-card-title
             +initflex($direction: row, $justification: center, $itemAlign: center, $bgcolor: none, $width: 75%, $height: 1.2em)
             p
@@ -49,3 +65,47 @@
                 font-family: arial
                 font-size: 0.6em
                 font-weight: bold
+    .polite-card:first-child
+        margin-top: 0.5em
+
+@media (min-width:  768px) and (max-width: 1024px)
+    .polite-section
+        form
+            .polite-filter
+                display: none
+    .polite-cards
+        margin-top: 36vh
+        flex-direction: row
+        flex-wrap: wrap
+        gap: 0.5em
+        align-items: flex-start
+        justify-content: center
+        .polite-card
+            width: 40%
+            height: 6em
+            padding: 0.2em 0em 0.2em 0em
+            margin-bottom: 0.5em
+        .polite-card:first-child
+            margin-top: 0
+
+@media (min-width:  1025px)
+    .polite-section
+        form
+            .form-search-section
+                +initflex($direction: row, $justification: center, $itemAlign: center, $bgcolor: #4c54a9, $width: 100%, $height: 50%)
+                gap: 2em
+                .polite-input-row
+                    align-items: center
+                    width: 20em
+                    height: 3em
+                .polite-button
+                    width: 16em
+                    height: 3.5em
+            .form-search-filter
+                height: 50%
+                .polite-filter
+    .polite-cards
+        +initflex-NoHeight($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: none, $width: 70vw)
+        .polite-card
+            +initflex-NoHeight($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: white, $width: 90%)
+        

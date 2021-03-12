@@ -1,16 +1,36 @@
 <div class="polite-section">
     <form>
-        <div class="polite-input-row">
-            <img src="./../../../assets/search_icon.svg" alt="search_icon">
-            <input class="polite-input" type="text" placeholder="Search">
+        <div class="form-search-section">
+            <div class="polite-input-row">
+                <img src="./../../../assets/search_icon.svg" alt="search_icon">
+                <input class="polite-input" type="text" placeholder="Search">
+            </div>
+    
+            <div class="polite-input-row">
+                <img src="./../../../assets/location_icon.svg" alt="location_icon">
+                <input class="polite-input" type="text" placeholder="City or State">
+            </div>
+            
+            <button  class="polite-button">Search Service</button>
         </div>
 
-        <div class="polite-input-row">
-            <img src="./../../../assets/location_icon.svg" alt="location_icon">
-            <input class="polite-input" type="text" placeholder="City or State">
+        <div class="form-search-filter">
+            <div class="polite-filter">
+                <p>Cost</p>
+            </div>
+    
+            <div class="polite-filter">
+                <p>Category</p>
+            </div>
+    
+            <div class="polite-filter">
+                <p>Date</p>
+            </div>
+    
+            <div class="polite-filter">
+                <p>Cat</p>
+            </div>
         </div>
-        
-        <button  class="polite-button">Search Service</button>
     </form>
 </div>
 
@@ -20,7 +40,7 @@
             <p>{{card.title}}</p>
         </div>
         <div class="polite-card-description">
-            <p>{{card.description}}</p>
+            <p>{{card.description | shortDescription}}</p>
         </div>
         <div class="polite-card-price">
             <p>Cost: {{card.price}}$</p>

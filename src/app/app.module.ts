@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { ServicesComponent } from './components/services/services.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PrintingAnimationComponent } from './components/animation/printing-animation/printing-animation.component';
+import { ShortDescriptionPipe } from './components/home/pipes/short-description.pipe';
 
 @NgModule({
   declarations: [
@@ -20,10 +23,13 @@ import { MenuComponent } from './components/menu/menu.component';
     ServicesComponent,
     ChatsComponent,
     ProfileComponent,
-    MenuComponent
+    MenuComponent,
+    PrintingAnimationComponent,
+    ShortDescriptionPipe
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

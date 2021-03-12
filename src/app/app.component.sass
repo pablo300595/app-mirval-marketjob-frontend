@@ -1,0 +1,13 @@
+@import './mixins'
+.polite-startup-animation
+    +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: red, $width: 100vw, $height: 100vh)
+    +initfixed($position: fixed, $bottom: 0, $top: 0, $right: 0, $left: 0)
+    z-index: 99
+    background: linear-gradient(#3c16e7, #9198e5)
+    .animation-bar
+        +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: black, $width: 100vw, $height: 10%)
+        .animation-title
+            font-family: oswald
+            font-weight: bold
+            font-size: 2em
+            color: white
