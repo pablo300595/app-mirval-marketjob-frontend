@@ -1,20 +1,51 @@
-<div class="polite-sidebar">
+<div class="polite-sidebar__mobile">
     <div class="sidebar__item" [routerLink]="['/home']">
-        <img src="./../../../../assets/search_icon_light.svg" alt="search_icon">
+        <img src="./../../../../assets/search_icon_neo.svg" alt="search_icon">
     </div>
     <div class="sidebar__item" [routerLink]="['/notifications']">
-        <img src="./../../../../assets/notification_bell_icon.svg" alt="notification_bell_icon">
+        <img src="./../../../../assets/notification_bell_icon_neo.svg" alt="notification_bell_icon">
     </div>
     <div class="sidebar__item" [routerLink]="['/services']">
-        <img src="./../../../../assets/suitcase_icon.svg" alt="suitcase_icon">
+        <img src="./../../../../assets/suitcase_icon_neo.svg" alt="suitcase_icon">
     </div>
     <div class="sidebar__item" [routerLink]="['/chats']">
-        <img src="./../../../../assets/message_icon.svg" alt="message_icon">
+        <img src="./../../../../assets/message_icon_neo.svg" alt="message_icon">
     </div>
     <div class="sidebar__item" [routerLink]="['/profile']">
-        <img src="./../../../../assets/profile_icon.svg" alt="profile_icon">
+        <img src="./../../../../assets/profile_icon_neo.svg" alt="profile_icon">
     </div>
     <div class="sidebar__item" [routerLink]="['/menu']">
         <img src="./../../../../assets/menu_icon.svg" alt="menu_icon">
+    </div>
+</div>
+
+<div class="polite-sidebar__desktop">
+    <div class="brand">
+        <img src="./../../../../assets/logo_icon_alt.svg" alt="logo_icon">
+    </div>
+    <div class="routes-detail">
+        <div class="sidebar__item" [routerLink]="['/home']">
+            <img src="./../../../../assets/search_icon_alt.svg" alt="search_icon">
+            <p>Search</p>
+        </div>
+        <div class="sidebar__item" [routerLink]="['/profile']">
+            <img src="./../../../../assets/profile_icon_alt.svg" alt="profile_icon">
+            <p>Profile</p>
+        </div>
+        <div class="sidebar__item" [routerLink]="['/services']">
+            <img src="./../../../../assets/suitcase_icon_alt.svg" alt="suitcase_icon">
+            <p>Services</p>
+        </div>
+    </div>
+    <div class="routes">
+        <div class="sidebar__item" [routerLink]="['/chats']">
+            <img src="./../../../../assets/message_icon_alt.svg" alt="message_icon">
+        </div>
+        <div class="sidebar__item" [routerLink]="['/notifications']">
+            <img src="./../../../../assets/notification_bell_icon_alt.svg" alt="notification_bell_icon">
+        </div>
+        <div class="sidebar__item" [routerLink]="['/menu']">
+            <img src="./../../../../assets/menu_icon_alt.svg" alt="menu_icon">
+        </div>
     </div>
 </div>
