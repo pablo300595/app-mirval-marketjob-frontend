@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.sass']
 })
 export class SidebarComponent implements OnInit {
-
+  isLoged: boolean
   constructor() { }
 
   ngOnInit(): void {
+    this.isLoged = true
   }
 
 }

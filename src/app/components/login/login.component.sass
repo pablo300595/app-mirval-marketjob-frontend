@@ -1,0 +1,135 @@
+@import './../../mixins'
+
+.have-account
+    font-weight: bold
+    font-family: Arial, Helvetica, sans-serif
+.create-one
+    font-family: Arial, Helvetica, sans-serif
+    color: blue
+
+.login-container
+    +initflex($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: #f9f9f9ff, $width: 100vw, $height: 100vh)
+    .login-left-section
+        display: none
+    .login-right-section
+        +initflex($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: #f9f9f9ff, $width: 100vw, $height: 100vh)
+        .brand-container-row
+            +initflex($direction: row, $justification: flex-start, $itemAlign: center, $bgcolor: rgb(5, 26, 80), $width: 100vw, $height: 15%)
+            .brand-cell
+                +initflex($direction: row, $justification: flex-start, $itemAlign: center, $bgcolor: none, $width: 100vw, $height: 100%)
+                img
+                    -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.9))
+            .create-account-cell
+                display: none
+        .create-account-row
+            +initflex($direction: row, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100vw, $height: 10%)
+            gap: 0.2em
+            .have-account
+                font-weight: bold
+                font-family: Arial, Helvetica, sans-serif
+            .create-one
+                font-family: Arial, Helvetica, sans-serif
+                color: blue
+            .create-one:hover
+                cursor: pointer
+                text-decoration: underline 
+        .title-row
+            +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 80%, $height: 15%)
+            h1
+                width: 100%
+                display: block
+                background-color: none
+                font-family: Arial, Helvetica, sans-serif
+                text-align: left
+        .input-row
+            +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100%, $height: 10%)
+            .label-cell
+                +initflex($direction: row, $justification: flex-start, $itemAlign: center, $bgcolor: none, $width: 80%, $height: 50%)
+                label
+                    font-family: Arial, Helvetica, sans-serif
+            .input-cell
+                +initflex($direction: row, $justification: flex-start, $itemAlign: center, $bgcolor: none, $width: 80%, $height: 50%)
+                input
+                    height: 100%
+                    width: 100%
+                    padding: 0
+                    margin: 0
+        .actions-row
+            +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100%, $height: 30%)
+            .button-cell
+                +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 80%, $height: 15%)
+                button
+                    +fontAndBorder($borderWidth: 0, $borderRadius: 0.5em, $fontFamily: arial, $fontWeight: bold)
+                    +widthandheight($width: 100%, $height: 2.5em)
+                    color: white
+                    background-color: red
+                    padding: 0 0
+            .forgot-cell
+                +initflex($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: none, $width: 100%, $height: 25%)
+                p
+                    color: blue
+                    font-family: Arial, Helvetica, sans-serif
+                p:hover
+                    cursor: pointer
+                    text-decoration: underline 
+
+@media (min-width:  0px) and (max-width: 320px)
+    h1
+        font-size: 1.5em
+
+@media (min-width:  768px) and (max-width: 1023px)
+    .login-container
+        .login-right-section
+            .brand-container-row
+                background-color: #f9f9f9ff
+                .brand-cell
+                    width: 50%
+                .create-account-cell
+                    +initflex($direction: row, $justification: flex-start, $itemAlign: center, $bgcolor: none, $width: 50%, $height: 100%)
+                    gap: 0.5em
+            .create-account-row
+                display: none
+            .actions-row
+                flex-direction: row
+                justify-content: flex-start
+                align-items: flex-start
+                gap: 2em
+                width: 80%
+                .button-cell
+                    width: 25%
+                    height: 25%
+                .forgot-cell
+                    justify-content: center
+                    align-items: flex-start
+                    width: 35%
+                    height: 25%
+
+@media (min-width:  1024px)
+    .login-container
+        flex-direction: row
+        .login-left-section
+            +initflex($direction: column, $justification: flex-start, $itemAlign: center, $bgcolor: #083cae, $width: 40%, $height: 100%)
+            .brand-cell
+                +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100%, $height: 20%)
+                img
+                    +widthandheight($width: 20em, $height: 20em)
+            .slogan-cell
+                +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100%, $height: 20%)
+                h1
+                    +initflex($direction: row, $justification: flex-end, $itemAlign: flex-end, $bgcolor: none, $width: 80%, $height: 50%)
+                    font-family: Arial, Helvetica, sans-serif
+                    color: white
+                    margin-block-start: 0
+                    margin-block-end: 0
+                    margin-inline-start: 0
+                    margin-inline-end: 0
+            .banner-cell
+                +initflex($direction: column, $justification: center, $itemAlign: center, $bgcolor: none, $width: 100%, $height: 60%)
+                img
+                    +widthandheight($width: 16em, $height: 16em)
+                    border-radius: 8em
+        .login-right-section
+            width: 60%
+            justify-content: center
+            .brand-container-row
+                display: none

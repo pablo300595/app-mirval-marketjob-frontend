@@ -1,4 +1,4 @@
-<div class="polite-sidebar__mobile">
+<div class="polite-sidebar__mobile" *ngIf="isLoged">
     <div class="sidebar__item" [routerLink]="['/home']">
         <img src="./../../../../assets/search_icon_neo.svg" alt="search_icon">
     </div>
@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="polite-sidebar__desktop">
+<div class="polite-sidebar__desktop" *ngIf="isLoged">
     <div class="brand">
         <img src="./../../../../assets/logo_icon_alt.svg" alt="logo_icon">
     </div>

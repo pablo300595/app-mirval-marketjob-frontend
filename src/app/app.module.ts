@@ -13,6 +13,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PrintingAnimationComponent } from './components/animation/printing-animation/printing-animation.component';
 import { ShortDescriptionPipe } from './components/home/pipes/short-description.pipe';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShortDescriptionPipe } from './components/home/pipes/short-description.
     ProfileComponent,
     MenuComponent,
     PrintingAnimationComponent,
-    ShortDescriptionPipe
+    ShortDescriptionPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
